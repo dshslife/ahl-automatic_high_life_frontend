@@ -1,0 +1,135 @@
+.coin {
+    transform-style: preserve-3d;
+    transform-origin: 50%;
+    animation: spin 20s infinite;
+    animation-timing-function: linear;
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+}
+
+.coin .front {
+    transform: translateZ(8px);
+    width: 160px;
+    height: 160px;
+    position: absolute;
+    border-radius: 100%;
+}
+
+.coin .back {
+    transform: translateZ(-8px) rotateY(180deg);
+    width: 160px;
+    height: 160px;
+    position: absolute;
+    border-radius: 100%;
+
+
+}
+
+.coin .side {
+    transform: translateX(72px);
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+
+.coin .side .circle {
+    height: 160px;
+    width: 16px;
+    position: absolute;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+
+.coin .side .circle:before,
+.coin .side .circle:after {
+    content: "";
+    display: block;
+    height: 15.682742452729697px;
+    width: 16px;
+    position: absolute;
+    transform: rotateX(84.375deg);
+    background-color: rgba(233, 233, 233, 0.96);
+}
+
+.coin .side .circle:before {
+    transform-origin: top center;
+}
+
+.coin .side .circle:after {
+    bottom: 0;
+    transform-origin: center bottom;
+}
+
+.coin .side .circle:nth-child(16) {
+    transform: rotateY(90deg) rotateX(180deg);
+}
+
+.coin .side .circle:nth-child(15) {
+    transform: rotateY(90deg) rotateX(168.75deg);
+}
+
+.coin .side .circle:nth-child(14) {
+    transform: rotateY(90deg) rotateX(157.5deg);
+}
+
+.coin .side .circle:nth-child(13) {
+    transform: rotateY(90deg) rotateX(146.25deg);
+}
+
+.coin .side .circle:nth-child(12) {
+    transform: rotateY(90deg) rotateX(135deg);
+}
+
+.coin .side .circle:nth-child(11) {
+    transform: rotateY(90deg) rotateX(123.75deg);
+}
+
+.coin .side .circle:nth-child(10) {
+    transform: rotateY(90deg) rotateX(112.5deg);
+}
+
+.coin .side .circle:nth-child(9) {
+    transform: rotateY(90deg) rotateX(101.25deg);
+}
+
+.coin .side .circle:nth-child(8) {
+    transform: rotateY(90deg) rotateX(90deg);
+}
+
+.coin .side .circle:nth-child(7) {
+    transform: rotateY(90deg) rotateX(78.75deg);
+}
+
+.coin .side .circle:nth-child(6) {
+    transform: rotateY(90deg) rotateX(67.5deg);
+}
+
+.coin .side .circle:nth-child(5) {
+    transform: rotateY(90deg) rotateX(56.25deg);
+}
+
+.coin .side .circle:nth-child(4) {
+    transform: rotateY(90deg) rotateX(45deg);
+}
+
+.coin .side .circle:nth-child(3) {
+    transform: rotateY(90deg) rotateX(33.75deg);
+}
+
+.coin .side .circle:nth-child(2) {
+    transform: rotateY(90deg) rotateX(22.5deg);
+}
+
+.coin .side .circle:nth-child(1) {
+    transform: rotateY(90deg) rotateX(11.25deg);
+}
+
+@keyframes spin {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(360deg);
+    }
+}

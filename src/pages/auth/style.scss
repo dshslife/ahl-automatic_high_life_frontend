@@ -1,0 +1,78 @@
+@import "styles/responsible.scss";
+
+
+@include mobile {
+    .LoginCont {
+        grid-template-columns: auto !important;
+        grid-template-rows: 100px 1fr;
+
+
+        .Cont {
+            width: calc(100% - 80px) !important;
+            height: calc(100% - 80px) !important;
+            padding : 40px 10px;
+        }
+    }    
+}
+
+.LoginCont {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 500px;
+
+    .GreenBar {
+        width: 100%;
+        height: 100%;
+        background-color: #15d4a4;
+        position: relative;
+    }
+
+
+    .Cont {
+        width: calc(100% - 100px);
+        height: calc(100% - 80px);
+        display: flex;
+        margin: auto auto;
+        flex-direction: column;
+
+        .title {
+            color: #15d4a4;
+            font-size: 3.5rem;
+        }
+
+        .register {
+            text-align: center;
+            margin-top: 10px;
+            color: rgb(200, 200, 200);
+            cursor: pointer;
+        }
+    }
+
+    .ToLogin {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+
+    .GoogleLogin {
+        width: 100%;
+        height: 60px;
+        border-radius: 20px;
+        margin-top: 20px;
+        background-color: rgb(245, 245, 245);
+        cursor: pointer;
+        transition: 0.3s;
+        border: 0.1px solid rgba(0,0,0,0.08);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+
+    }
+
+    .GoogleLogin:hover {
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.05);
+    }
+}

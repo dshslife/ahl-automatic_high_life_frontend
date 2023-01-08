@@ -1,0 +1,100 @@
+@import "styles/responsible.scss";
+
+@include mobile {
+    .Navbar {
+        .Content {
+            grid-template-columns: 1fr !important;
+            grid-template-rows: 50px 1fr !important;
+
+            .NavTool {
+                flex-direction: row !important;
+                gap: 10px;
+                border-bottom: 1px solid rgb(240, 240, 240);
+                align-items: center;
+                overflow-x: scroll;
+                overflow-y: hidden;
+                white-space: nowrap;
+            }
+        }
+    }    
+}
+
+.Navbar {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 60px 1fr;
+
+    .TopBar {
+        width: calc(100% - 70px);
+        padding: 0px 35px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid rgb(240, 240, 240);
+    }
+
+
+    .Content {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 250px 1fr;
+
+
+        .NavTool {
+            width: calc(100% - 40px);
+            padding: 0px 20px;
+            height: 100%;
+            border-right: 1px solid rgb(240, 240, 240);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ContentReal {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+
+@include mobile {
+    .RadioButton {
+        label {
+            margin-top: 0px !important;
+            padding: 10px 5px !important;
+            margin: 0px 10px;
+        }
+    }
+}
+
+.RadioButton {
+    input {
+        display: none;
+    }
+
+    label {
+        width: 100%;
+        display: inline-block;
+        text-align: center;
+        padding: 12px 0px;
+        margin-top: 10px;
+        border-radius: 10px;
+        transition: 0.3s;
+        cursor: pointer;
+        font-weight: 500;
+    }
+
+    label:hover, label:focus {
+        transform: scale(1.01);
+        background-color: rgb(240, 240, 240);
+    }
+
+    input:checked + label {
+        background-color: #15d4a4;
+        color: white;
+        transform: scale(0.99);
+    }
+}

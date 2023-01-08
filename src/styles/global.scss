@@ -1,0 +1,52 @@
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+@import "styles/responsible.scss";
+
+// 여기다 글자색, 배경색 같은 SCSS 변수들 정의해놓고 불러다 쓰도록 하면 좋을듯
+// 누군가는 해주겠지 
+
+@include mobile {
+    html {
+        font-size: 12px;
+    }
+}
+
+* {
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    padding: 0px;
+    margin: 0px;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+}
+
+body, #root{
+    width: 100%;
+    height: -webkit-fill-available;
+    overflow: hidden;
+}
+
+form {
+    width: 100%;
+    display: inline-block;
+    display: flex;
+    flex-direction: column;
+}
+
+.center {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.sub {
+    color: grey;
+}
+
+.green {
+    color: #15d4a4;
+}

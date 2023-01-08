@@ -1,0 +1,23 @@
+.Input {
+    padding: 15px 20px;
+    font-size: 1.1rem;
+    border-radius: 20px;
+    margin-top: 20px;
+    border: 1.6px solid rgb(230, 230, 230);
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.Input:disabled {
+    background-color: rgb(255, 220, 220);
+    text-align: center;
+}
+
+.Input:disabled::placeholder {
+    color: red;   
+}
+
+.Input:focus {
+    outline: none;
+    border: 1.6px solid #15d4a4;
+}
