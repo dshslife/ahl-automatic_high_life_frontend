@@ -1,5 +1,6 @@
 import React from 'react';
 import './style.scss';
+import NavImage from 'asset/image/navicon.png';
 
 import Picture from 'components/picture';
 import { useNavigate } from 'react-router-dom';
@@ -23,7 +24,7 @@ function Navbar({ ProfileImage = "", children }) {
     return (
         <div className='Navbar'>
             <div className="TopBar">
-                <h3>{process.env.REACT_APP_NAME}</h3>
+                <h3><Picture url={NavImage} width="30px" height="30px"></Picture></h3>
                 <Picture url={ProfileImage} width="30px" height="30px"></Picture>
             </div>
             <div className="Content">

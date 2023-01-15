@@ -1,5 +1,7 @@
 import "./style.scss";
 import React, { useState } from 'react';
+import logo from 'asset/image/logo.png'
+import RegImage from 'asset/image/regform.png';
 
 import Input from "components/input";
 import Picture from "components/picture";
@@ -14,7 +16,6 @@ function AuthPage() {
 
     function OnGoogleLoginClick(e) {
         // 구글 로그인 이벤트
-
 
         navigate('/main');
     }
@@ -39,7 +40,7 @@ function AuthPage() {
         <div className="LoginCont">
             <div className="GreenBar">
                 {/* 왼쪽에 사진 뜨는 영역 */}
-                <Picture url="https://picsum.photos/1920/1080"></Picture>
+                <Picture url={logo}></Picture>
             </div>
             <div className="Cont">
                 {
